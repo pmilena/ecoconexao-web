@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="kids.css">
+    <title>EcoConexão - Kids</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Nerko+One&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Gamja+Flower&family=Inter:wght@100..900&family=Nerko+One&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="content">
+        <div class="logo">
+            <img src="./img/planeta.png" alt="">
+            <h3>EcoKids</h3>
+        </div>
+        <nav>
+            <ul class="menu-kids">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="responsaveis.html">Responsáveis e Escolas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="first-section" id="home">
+        <div class="conteudo-principal">
+            <h1>Conheça o mundo EcoKids!</h1>
+            <h2>Descubra como cuidar do planeta de forma divertida!</h2>
+
+        </div>
+    </section>
+
+    <section class="meio-ambiente" id="meio-ambiente">
+        <div class="main">
+            <div class="content_meio_ambiente">
+                <h2>O que é Meio Ambiente?</h2>
+                <p>O meio ambiente é como a grande casa de todos nós! Ele inclui as árvores que nos dão sombra, os
+                    animais que vivem nas florestas, o ar que respiramos, a água que bebemos e até o solo onde plantamos
+                    alimentos. Cada parte tem um papel especial, como em um time, e precisamos cuidar bem dele para que
+                    todos possam viver felizes e saudáveis. Quando protegemos a natureza, ajudamos o planeta a ficar
+                    forte e bonito para nós e para os futuros amiguinhos que virão!</p>
+            </div>
+            <div class="video_meio_ambiente">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5BSqJAtjML8?si=n7aTsK5VEBUMupFV"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <section class="slider-container">
+        <div class="slide-title">
+            <h2>Dicas para preservar o <span>meio ambiente</span></h2>
+        </div>
+        <div class="slider-content">
+            <button class="arrow left-arrow" onclick="prevSlide()">&#10094;</button>
+
+            <div class="slider">
+                <div class="slide">
+                    <img src="img/garoto-apagando-a-luz_29937-1664.avif" alt="Apague as luzes">
+                    <p>Apague as luzes ao sair do quarto.</p>
+                </div>
+                <div class="slide">
+                    <img src="img/reciclar-kids.avif" alt="Recicle papel, plástico e vidro">
+                    <p>Recicle papel, plástico e vidro.</p>
+                </div>
+                <div class="slide">
+                    <img src="img/arvore.avif" alt="Plante uma árvore">
+                    <p>Plante uma árvore.</p>
+                </div>
+                <div class="slide">
+                    <img src="img/escovar-dentes.jpg" alt="Use menos água ao escovar os dentes">
+                    <p>Use menos água ao escovar os dentes.</p>
+                </div>
+            </div>
+            <button class="arrow right-arrow" onclick="nextSlide()">&#10095;</button>
+        </div>
+        </div>
+    </section>
+    <section class="games">
+        <h2>Jogos</h2>
+        <span>Você pode encontrar estes e outros jogos super divertidos
+            <a href="https://www.coquinhos.com/tag/jogos-meio-ambiente/" target="_blank">aqui</a>
+        </span>
+        <div class="games-container">
+            <div>
+                <a href="https://www.coquinhos.com/pintar-na-primavera/" target="_blank">
+                    <img src="./img/jogo-pintar.png" alt="">
+                    <p>Pintar a natureza</p>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.coquinhos.com/caca-palavras-sobre-meio-ambiente/" target="_blank">
+                    <img src="./img/cruzadas.png" alt="">
+                    <p>Palavras Cruzadas do Meio Ambiente</p>
+                </a>
+            </div>
+            <div>
+                <a href="https://www.coquinhos.com/quebra-cabeca-de-coleta-de-lixo/" target="_blank">
+                    <img src="./img/puzzle-coleta-lixo.jpg" alt="">
+                    <p>Quebra cabeça Coleta de lixo</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <setion class="responsaveis">
+        <div class="responsaveis-container">
+            <p>A EcoConexão tem uma página exclusiva para os responsáveis. <span>Para saber mais, click no botão
+                    abaixo.</span>
+            </p>
+            <div class="btn">
+                <a href="responsaveis.html"><button>Responsavéis</button></a>
+            </div>
+        </div>
+    </setion>
+    <section class="contatos" id="contatos">
+        <h3>Contatos</h3>
+        <div class="contatos-secao">
+            <div>
+                <i class="bi bi-telephone"></i>
+                <span>(82)98888-8888</span>
+            </div>
+            <div>
+                <i class="bi bi-instagram"></i>
+                <span></span>
+            </div>
+            <div>
+                <i class="bi bi bi-linkedin"></i>
+                <span></span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h4>Desenvolvido por Ana Santana, Vanessa Bispo e Milena Pereira &copy;</b></h4>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+<!--https://icons.getbootstrap.com/
+biblioteca de icons-->

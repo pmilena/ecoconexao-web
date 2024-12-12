@@ -1,0 +1,597 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  width: 100vw;
+  height: 100vw;
+  font-size: 62, 5%;
+  overflow-x: hidden; /* retirar a barra de rolagem da pagina, hidden é a opcão horizontal */
+  background-color: #030303;
+}
+
+header {
+  z-index: 999;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+
+/* MENU */
+.content {
+  width: 100vw;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 3rem;
+  align-items: center; /*alinhar ao centro*/
+  background-color: #a2ca71;
+  position: fixed;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+/*o texto estava empurrando a foto e tomando conta da cx toda .... não sei onde esse topico se aplica esqueci*/
+.logo h3 {
+  color: black;
+  font-size: 1.6rem;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  margin-right: 5px;
+}
+
+.content .menu-kids {
+  width: 350px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.content .menu-kids li a {
+  color: black;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 200ms ease-in;
+}
+
+.content .menu-kids li a:hover {
+  border-bottom: 4px solid black;
+  color: black;
+}
+
+/*first-section*/
+
+.first-section {
+  background-image: url(./img/banner_kids.png);
+  background-position: center center; /* usar dois center, centralizar img*/
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*não repete a imagem no decorrer da tela*/
+  background-position-y: 50px; /* posição da img no eixo vertical, p/ que img desça um pouco*/
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-section .conteudo-principal {
+  display: flex;
+  width: 35rem;
+  flex-direction: column;
+  margin-right: -40rem;
+  margin-top: 4rem;
+  justify-content: flex-end;
+  gap: 1rem;
+  text-align: end;
+}
+
+.first-section h1 {
+  color: rgb(17, 183, 103);
+  font-size: 5.5rem;
+  text-transform: uppercase;
+  font-family: "Nerko One";
+}
+
+.first-section h2 {
+  color: rgb(68, 66, 66);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  font-family: "Coming Soon";
+}
+
+.btn button {
+  width: 230px;
+  height: 60px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #a2ca71;
+  border-radius: 10px;
+  color: black;
+  font-weight: 700;
+  margin-top: 2rem;
+  transition: all 400ms ease-in;
+}
+
+.btn button:hover {
+  border: 1px solid #bedc74;
+  background-color: transparent;
+  color: #bedc74;
+}
+
+/* Sobre nós */
+
+.meio-ambiente {
+  background-color: #387f39;
+  width: 100%;
+  color: white;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 7rem 4rem;
+}
+
+.content_meio_ambiente {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content_meio_ambiente h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: "Nerko One";
+  font-weight: 400;
+}
+
+.content_meio_ambiente p {
+  text-align: center;
+  font-size: 1.3rem;
+  width: 600px;
+  margin-top: 20px;
+  font-family: "Coming Soon";
+}
+
+/* Mundo Kids*/
+
+.kids-dicas {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #b0bf8b;
+}
+.kids-dicas h2 {
+  font-size: 3rem;
+}
+
+/* slides dicas */
+
+.slider-container {
+  background-color: #a9ce7b;
+  padding: 5rem 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slide-title h2 {
+  font-size: 4rem;
+  width: 600px;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-family: "Coming Soon";
+  color: #387f39;
+}
+
+.slide-title span {
+  color: #ab5c0d;
+  text-transform: uppercase;
+  font-family: "Nerko One";
+  font-size: 6rem;
+  display: block;
+}
+
+.slider-content {
+  position: relative;
+  width: 45%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.slide img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.slide p {
+  font-size: 1.5em;
+  color: #525c4c;
+  font-family: "Coming Soon";
+  font-weight: 700;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+/* Games */
+
+.games {
+  background-color: #e3d6b9;
+  padding: 4rem 0;
+}
+
+.games h2 {
+  text-align: center;
+  font-family: "Nerko One";
+  font-size: 4rem;
+  color: #387f39;
+  font-weight: 400;
+}
+
+.games span {
+  display: block;
+  text-align: center;
+  margin-bottom: 4rem;
+  margin-top: 10px;
+}
+
+.games span a {
+  text-decoration: underline;
+  color: #387f39;
+  font-weight: 600;
+}
+
+.games-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.games-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.games-container div img {
+  border-radius: 30px;
+  border: solid #62b363 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.games-container div:hover img {
+  transform: translateY(-5px);
+}
+.games-container a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.games-container p {
+  font-size: 1.2rem;
+  font-family: "Coming Soon";
+  font-weight: 600;
+  color: #08810a;
+}
+
+/* redirecionamento para página responsáveis  */
+.responsaveis-container {
+  background-color: #08810a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.responsaveis-container p {
+  font-size: 2rem;
+  width: 50%;
+  text-align: center;
+  font-family: "Coming Soon";
+  font-weight: 600;
+  color: #e3d6b9;
+}
+
+.responsaveis-container span {
+  font-size: 2rem;
+  width: 50%;
+  text-align: center;
+  font-family: "Coming Soon";
+  font-weight: 600;
+  color: #e3c569;
+}
+/* Contatos */
+.contatos {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: black;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.contatos h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contatos-secao {
+  width: 650px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.contatos-secao i {
+  margin-left: 2rem; /*para afastar icone do nome */
+}
+
+.contatos-secao div {
+  cursor: pointer;
+  transition: all 200ms ease-in;
+}
+
+footer {
+  height: 25px;
+  background-color: #bedc74;
+  color: black;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1200px) {
+  .main {
+    display: block;
+    align-items: center;
+  }
+  .content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 12%;
+    padding-left: 0px;
+  }
+  .sobre-nos img {
+    width: 600px;
+    margin-left: -2px;
+  }
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 992px) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 45%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row; /*fica um do lado do outro*/
+    justify-content: space-between;
+    padding: 0px 40px;
+  }
+
+  .content .menu {
+    display: none;
+    /*desaparece os links da tela (home, sobre nos etc)*/
+  }
+
+  .one,
+  .two,
+  .three {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin: 6px auto;
+    transition-duration: 0.5s;
+  }
+
+  .menu-toggle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .content.on {
+    position: fixed;
+    /*para fixar e nao rolar na pagina */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(253, 255, 252, 0.7);
+    z-index: 10; /*certificando que esse elemento vai ficar na frente de qualquer outro elemento*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content.on .logo {
+    display: none; /*remover a logo em cima do hamburguer*/
+  }
+
+  .content.on .menu-toggle {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+  }
+
+  .content.on .menu {
+    display: block;
+  }
+
+  .content.on .menu li {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content.on .menu li a {
+    font-size: 2rem;
+    padding: 2rem;
+  }
+
+  .content.on .menu-toggle .two {
+    opacity: 0;
+
+    /*Remove a linha do meio do hamburguer*/
+  }
+
+  .content.on .menu-toggle .one {
+    transform: rotate(45deg) translate(5px, -8px);
+  }
+
+  .content.on .menu-toggle .three {
+    transform: rotate(-45deg) translate(20px, -6px);
+  }
+
+  .contatos-secao {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .contatos-secao div {
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .conteudo-principal h1 {
+    width: 500px;
+    text-align: center;
+    font-size: 3rem;
+  }
+
+  .conteudo-principal h2 {
+    font-size: 2rem;
+  }
+
+  .sobre-nos img {
+    width: 400px;
+    height: 250px;
+    margin-left: 10px;
+  }
+
+  .sobre-nos p {
+    text-align: center;
+    width: 400px;
+  }
+  .contatos-secao {
+    width: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .btn {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+  }
+
+  .btn button {
+    font-size: 1.5rem;
+    width: 100%;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+  }
+
+  .conteudo-principal h1 {
+    width: 350px;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .conteudo-principal h2 {
+    width: 200px;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 395px) {
+  .sobre-nos img {
+    width: 250px;
+    height: auto;
+    margin-left: 10px;
+  }
+
+  .contentsobre p {
+    text-align: center;
+    width: 250px;
+  }
+}
