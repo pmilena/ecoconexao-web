@@ -47,7 +47,6 @@
         </div>
         <div class="img_missao"><img src="./img/earth-1013746_1280.jpg" alt=""></div>
     </div>
-
    </section>
     <section class="sobre" id="sobrenos">
         <div><h1>Sobre Nós</h1></div>
@@ -84,9 +83,36 @@
             </div>
         </div>
     </section>
-    <section class="contato" id="contatos">
-        <h2>Contatos</h2>
-       <!--Aqui milena -->
+    <section class="news" id="news">
+        <h2>Assine a News EcoConexão</h2>
+        <div class="news-container">
+        <div class="news-container-text">
+            <h3>Cadastre-se e receba conteúdos exclusivos!</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem dicta eaque, laudantium illum culpa vero placeat nobis esse! Soluta eaque impedit eum magnam assumenda. Saepe vitae sunt iure! Earum, ea.*100</p>
+        </div>
+        <div class="assine-newsletter-container">
+            <h1>Cadastro de Usuário</h1>
+            <form id="registrationForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required /><br /><br />
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required /><br /><br />
+        
+                <label for="tipoConteudo">Tipo de Conteúdo de Interesse:</label>
+                <select id="tipoConteudo" name="tipoConteudo" required>
+                    <option value="" disabled selected>Selecione uma opção</option>
+                    <option value="pais">Pais/Responsáveis</option>
+                    <option value="escolas">Escolas</option>
+                    <option value="criancas">Crianças</option>
+                </select><br /><br />
+        
+                <button type="submit">Cadastrar</button>
+            </form>
+        
+            <div id="responseMessage"></div>
+        </div>
+    </div>
     </section>
     <footer>
         <h4>Desenvolvido por Ana Santana, Vanessa Bispo e Milena Pereira &copy;</b></h4>

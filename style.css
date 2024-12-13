@@ -1,570 +1,630 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    border: none;
-    text-decoration: none;
-    font-family: "Roboto", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  border: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
 }
 
-html{
-    width: 100vw;
-    height: 100vw;
-    font-size: 62,5%;
-    overflow-x: hidden; /* retirar a barra de rolagem da pagina, hidden é a opcão horizontal */
-    background-color: #030303;
+html {
+  width: 100vw;
+  height: 100vw;
+  font-size: 62, 5%;
+  overflow-x: hidden; /* retirar a barra de rolagem da pagina, hidden é a opcão horizontal */
+  background-color: #030303;
 }
 
+header {
+  z-index: 99;
+}
 /* MENU */
 .content {
-    width: 100vw;
-    height: 70px;
-    display: flex;
-    justify-content: space-around; 
-    /*espaçamento entre nosso itens */    
-    align-items: center; /*alinhar ao centro*/
-    background-color: #A2CA71;
-    position: fixed;
-    
+  width: 100vw;
+  height: 70px;
+  display: flex;
+  justify-content: space-around;
+  /*espaçamento entre nosso itens */
+  align-items: center; /*alinhar ao centro*/
+  background-color: #a2ca71;
+  position: fixed;
 }
 
-.logo{
-    width: 70px;
-    height: auto;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+.logo {
+  width: 70px;
+  height: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
-/*o texto estava empurrando a foto e tomando conta da cx toda .... não sei onde esse topico se aplica esqueci*/ 
-.logo h3{
-    color: black;
-    font-size: 1.6rem;
-}
-
-.logo img{
-    width: 100%;
-    height: 100%;
-    border-radius: 50px;
+/*o texto estava empurrando a foto e tomando conta da cx toda .... não sei onde esse topico se aplica esqueci*/
+.logo h3 {
+  color: black;
+  font-size: 1.6rem;
 }
 
-.content .menu{
-    width: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
 }
 
-.content .menu li a{
-   padding: 3 rem 1 rem 2 rem 1 rem;
-   color: black;
-   font-size: 1rem;
-   text-transform: uppercase;
-   font-weight: 500;
-   transition: all 200ms ease-in;
+.content .menu {
+  width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content .menu li a {
+  padding: 3 rem 1 rem 2 rem 1 rem;
+  color: black;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: all 200ms ease-in;
 }
 
 .content .menu li a:hover {
-    border-bottom: 4px solid black;
-    color: black;
+  border-bottom: 4px solid black;
+  color: black;
 }
-
 
 /*first-section*/
 
-.first-section{
-    background-image: linear-gradient(rgba(27, 27, 27,0.5),rgba(27, 27, 27,0.5)) ,url(./img/fundoterra.jpg);
-    background-position: center center; /* usar dois center, centralizar img*/
-    background-size: cover;/*cobri toda tela */
-    background-repeat: no-repeat; 
-    /*não repete a imagem no decorrer da tela*/    
-    background-position-y:50px ;  /* posição da img no eixo vertical, p/ que img desça um pouco*/
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.first-section {
+  background-image: linear-gradient(
+      rgba(27, 27, 27, 0.5),
+      rgba(27, 27, 27, 0.5)
+    ),
+    url(./img/fundoterra.jpg);
+  background-position: center center; /* usar dois center, centralizar img*/
+  background-size: cover; /*cobri toda tela */
+  background-repeat: no-repeat;
+  /*não repete a imagem no decorrer da tela*/
+  background-position-y: 50px; /* posição da img no eixo vertical, p/ que img desça um pouco*/
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.first-section .conteudo-principal{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.first-section .conteudo-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.first-section h1{
-    color: white;
-    font-size: 2rem;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+.first-section h1 {
+  color: white;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
-.first-section h2{
-    color: rgb(177, 177, 177);    
-    font-size: 2rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    margin-bottom: 2rem;
+.first-section h2 {
+  color: rgb(177, 177, 177);
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
 }
 
-.btn button{
-    width: 230px;
-    height: 60px;
-    cursor: pointer;
-    text-transform: uppercase;
-    background-color: #A2CA71;
-    border-radius: 10px;
-    color: black;
-    font-weight: 700;
-    margin-top: 5rem;
-    transition:all 400ms ease-in;
+.btn button {
+  width: 230px;
+  height: 60px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #a2ca71;
+  border-radius: 10px;
+  color: black;
+  font-weight: 700;
+  margin-top: 5rem;
+  transition: all 400ms ease-in;
 }
 
 .btn button:hover {
-    border: 1px solid #BEDC74;
-    background-color: transparent;
-    color: #BEDC74;
+  border: 1px solid #bedc74;
+  background-color: transparent;
+  color: #bedc74;
 }
 
 .btn {
-    width: 480px;
-    display: flex;
-    justify-content: space-between;
+  width: 480px;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* MISSÃO */
-.missao{
-    height: 100vh;
-    width: 100vw;
-    background-color: #A2CA71;
-    padding-bottom: 5rem;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.img_missao img{
-    width: 400px;
-    height: 400px;
-    margin-top:10rem;
-    margin-left: 10rem;
-    margin-bottom: 7rem;
-    border-radius: 200px;
-    box-shadow: 0 35px 80px rgba(0, 0, 0, .50);
-    border: 2px solid rgb(155, 155, 155);
-}
-
-.conteudo_missao {
-    display: flex;
-    justify-content: space-between;
-}
-
-.conteudo_missao_principal{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
-.conteudo_missao_principal h2 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-}
-
-.conteudo_missao_principal p {
-    text-align: justify;
-    font-size: 1.3rem;
-    width: 600px; 
-    margin-top: 20px;
-}
-
-/* Sobre nós */
-.sobre{
-    background-color: #afe3c0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sobre h1{
-    padding-top: 100px;
-    font-size: 2rem;
-}
-
-.sobrenos{
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #afe3c0;
-    flex-wrap: wrap;
-    gap: 20px 60px;
-}
-
-.sobrenos .card{
-    position:relative;
-    display: flex;
-    justify-content: center;
-    width: 300px;
-    height: 400px;
-    background: #2c3e50;
-    border-radius: 20px;
-    box-shadow: 0 35px 80px rgba(0, 0, 0, .50);
-    transition: .7s;
-}
-.sobrenos .card:hover{
-    height: 430px;
-    width: 300px;
-}
-
-.sobrenos .card .caixaimg{
-    position: absolute;
-    top: 10px;
-    width: 250px;
-    height: 350px;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: 0.7s;
-}
-
-.sobrenos .card .caixaimg img{
-    position: absolute;
-    top: 0;
-    left: 0x;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.sobrenos .card:hover .caixaimg{
-    top: -100px;
-    scale: .65;
-    border-radius: 12px;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
-}
-
-.sobrenos .card .conteudo{
-    position: absolute;
-    top: 350px;
-    width: 100%;
-    height: 35px;
-    text-align: center;
-    padding: 0 30px;
-    overflow: hidden;
-    transition: 0.7s;
-    color: #fff;
-}
-
-.sobrenos .card .conteudo h2{
-    margin-top: 12px;
-    font-size: 1.2rem;
-    
-}
-.sobrenos .card:hover .conteudo{
-    top: 195px;
-    height: 350px;
-}
-.sobrenos .card .conteudo a {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 8px 16px ;
-    border-radius: 10px;
-    background: #BEDC74;
-    color: black;
-    transition: .7s;
-}
-
-.sobrenos .card .conteudo a:hover{
-    background: #afe3c0;
-}
-
-/*CONTATOS*/
-.contato{
-    background-color: #A2CA71;
-    width:100%;
-    height:50vh;
-}
-.contato h2{
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
-}
-/*rodape*/
-footer {
-    height: 50px;
-    background-color: #2c3e50;
-    color: #fff;
-}
-
-footer h4 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 10px;
-    font-size: 0.9rem;
-}
-
-
-@media(max-width: 1200px) {
-    .conteudo_missao{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 12%;
-        padding-left: 0px;
-        
-    }
-    .img_missao img {
-        width:400px ;
-        margin-left: -2px;
-
-    }
-    html{
-        font-size: 50%;
-    }
-}
-
-@media (max-width: 992px){
-    .conteudo_missao{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 6%;  
-    }
-    .conteudo_missao_principal h2 {
-        margin-bottom: 0px;
-        margin-top: 10rem;
-    }
-
-    .conteudo_missao_principal p{
-        margin-bottom: 10px;
-        margin-top: 10px;
-    }
-
-    html {
-        font-size: 75%;
-    }
-    .img_missao img {
-        width:300px ;
-        height: 300px;
-
-    }
-    .sobrenos .card{
-        width: 270px;
-        height: 250px;
-    }
-    .sobrenos .card:hover{
-        height: 330px;
-        width: 230px;
-    }
-
-    .sobrenos .card .caixaimg{
-        width: 150px;
-        height: 200px;
-    }
-
-    .sobrenos .card .conteudo{
-        top: 210px;
-    }
-    .sobrenos .card .conteudo h2{
-        padding-bottom: 15px;
-        font-size: 1.5rem;
-    }
-
-    .sobrenos .card .conteudo p {
-        overflow: hidden;
-        font-size: 1.5rem;
-    }
-
-    .sobrenos .card:hover .conteudo{
-       top: 80px;
-    }
-}
-
-@media(max-width:768px){
-    html{
-        font-size: 59%;
-    }
-
-    .content{
-        display: flex;
-        flex-direction: row; /*fica um do lado do outro*/
-        justify-content: space-between;
-        padding: 0px 40px;
-    }
-
-    .content .menu{
-        display: none; 
-        /*desaparece os links da tela (home, sobre nos etc)*/
-        
-    }
-
-    .one,
-    .two,
-    .three{
-        width: 100%;
-        height: 2px;
-        background-color: white;
-        margin: 6px auto;
-        transition-duration: 0.5s;
-    }
-
-    .menu-toggle{
-        width: 30px;
-        height: 30px;
-    }
-
-    .content.on{
-        position: fixed; 
-        /*para fixar e nao rolar na pagina */        
-        top: 0;
-        left: 0;
-        bottom: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(253, 255, 252, 0.7);
-        z-index: 10; /*certificando que esse elemento vai ficar na frente de qualquer outro elemento*/ 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .content.on .logo{
-        display: none; /*remover a logo em cima do hamburguer*/
-    }
-
-    .content.on .menu-toggle{
-        position: absolute;
-        right: 40px;
-        top: 20px;
-    }
-
-    .content.on .menu{
-        display: block;
-    }
-
-    .content.on .menu li{
-        display: flex;
-        justify-content: center;
-    }
-
-    .content.on .menu li a {
-        font-size: 2rem;
-        padding: 2rem;
-    }
-
-    .content.on .menu-toggle .two{
-        opacity: 0;
-
-    /*Remove a linha do meio do hamburguer*/
-
-    }
-
-    .content.on .menu-toggle .one{
-        transform: rotate(45deg) translate(5px, -8px);
-    }
-
-    .content.on .menu-toggle .three{
-        transform: rotate(-45deg) translate(20px,-6px);
-    }
-
-    .sobrenos .card{
-        width: 250px;
-        height: 300px;
-    }
-    .sobrenos .card:hover{
-        height: 260px;
-        width: 180px;
-    }
-
-    .sobrenos .card .caixaimg{
-        width: 150px;
-        height: 200px;
-    }
-
-    .sobrenos .card .conteudo{
-        top: 210px;
-    }
-    .sobrenos .card .conteudo h2{
-        padding-bottom: 10px;
-        font-size: 2rem;
-    }
-
-    .sobrenos .card .conteudo p {
-        overflow: hidden;
-        font-size: 1.3rem;
-    }
-
-    .sobrenos .card:hover .conteudo{
-       top: 60px;
-    }
-}
-
-@media (max-width: 600px){
-.conteudo-principal h1{ 
-    width: 500px;
-    text-align: center;
-    font-size: 1rem;
-}
-
-.conteudo-principal h2{
-    font-size: 2rem;
+.missao {
+  /* height: 100vh; */
+  width: 100vw;
+  background-color: #a2ca71;
+  padding-bottom: 2rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .img_missao img {
+  width: 400px;
+  height: 400px;
+  margin-top: 10rem;
+  margin-left: 10rem;
+  margin-bottom: 7rem;
+  border-radius: 200px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgb(155, 155, 155);
+}
+
+.conteudo_missao {
+  display: flex;
+  justify-content: space-between;
+}
+
+.conteudo_missao_principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 1rem; */
+}
+
+.conteudo_missao_principal h2 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.conteudo_missao_principal p {
+  text-align: justify;
+  font-size: 1.3rem;
+  width: 600px;
+  margin-top: 20px;
+}
+
+/* Sobre nós */
+.sobre {
+  background-color: #afe3c0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 4rem;
+}
+
+.sobre h1 {
+  padding-top: 100px;
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+.sobrenos {
+  /* height: 100vh; */
+  padding-bottom: 5rem;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #afe3c0;
+  flex-wrap: wrap;
+  gap: 20px 60px;
+}
+
+.sobrenos .card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 400px;
+  background: #2c3e50;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.5);
+  transition: 0.7s;
+}
+.sobrenos .card:hover {
+  height: 430px;
+  width: 300px;
+}
+
+.sobrenos .card .caixaimg {
+  position: absolute;
+  top: 10px;
+  width: 250px;
+  height: 350px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.7s;
+}
+
+.sobrenos .card .caixaimg img {
+  position: absolute;
+  top: 0;
+  left: 0x;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sobrenos .card:hover .caixaimg {
+  top: -100px;
+  scale: 0.65;
+  border-radius: 12px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+}
+
+.sobrenos .card .conteudo {
+  position: absolute;
+  top: 350px;
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  padding: 0 30px;
+  overflow: hidden;
+  transition: 0.7s;
+  color: #fff;
+}
+
+.sobrenos .card .conteudo h2 {
+  margin-top: 12px;
+  font-size: 1.2rem;
+}
+.sobrenos .card:hover .conteudo {
+  top: 195px;
+  height: 350px;
+}
+.sobrenos .card .conteudo a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: #bedc74;
+  color: black;
+  transition: 0.7s;
+}
+
+.sobrenos .card .conteudo a:hover {
+  background: #afe3c0;
+}
+
+/*NEWS*/
+
+.news {
+  background-color: #a2ca71;
+  width: 100%;
+  padding: 50px;
+  /* height: 50vh; */
+}
+.news h2 {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  font-size: 2rem;
+  margin-bottom: 0px;
+}
+
+.news-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px auto;
+  gap: 100px;
+}
+
+.news-container-text {
+  width: 400px;
+  font-size: 1.5rem;
+}
+
+.news-container-text h3 {
+  margin-bottom: 20px;
+  color: #9b4004;
+}
+
+.assine-newsletter-container {
+  background-color: #e0f0cc;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.assine-newsletter-container h1 {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.assine-newsletter-container label {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.assine-newsletter-container input {
+  padding: 8px;
+  width: 30vw;
+  border-radius: 6px;
+}
+
+.assine-newsletter-container select {
+  padding: 8px 15px 8px 10px;
+  border-radius: 6px;
+}
+
+.news button {
+  padding: 12px 16px;
+  margin-top: 30px;
+  background-color: #a2ca71;
+  border-radius: 6px;
+}
+
+.news button:hover {
+  background-color: #c0d4a7;
+  cursor: pointer;
+}
+
+/*rodape*/
+footer {
+  height: 50px;
+  background-color: #2c3e50;
+  color: #fff;
+}
+
+footer h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1200px) {
+  .conteudo_missao {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 12%;
+    padding-left: 0px;
+  }
+  .img_missao img {
+    width: 400px;
+    margin-left: -2px;
+  }
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .conteudo_missao {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 6%;
+  }
+  .conteudo_missao_principal h2 {
+    margin-bottom: 0px;
+    margin-top: 10rem;
+  }
+
+  .conteudo_missao_principal p {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  html {
+    font-size: 75%;
+  }
+  .img_missao img {
+    width: 300px;
+    height: 300px;
+  }
+  .sobrenos .card {
+    width: 270px;
+    height: 250px;
+  }
+  .sobrenos .card:hover {
+    height: 330px;
+    width: 230px;
+  }
+
+  .sobrenos .card .caixaimg {
+    width: 150px;
+    height: 200px;
+  }
+
+  .sobrenos .card .conteudo {
+    top: 210px;
+  }
+  .sobrenos .card .conteudo h2 {
+    padding-bottom: 15px;
+    font-size: 1.5rem;
+  }
+
+  .sobrenos .card .conteudo p {
+    overflow: hidden;
+    font-size: 1.5rem;
+  }
+
+  .sobrenos .card:hover .conteudo {
+    top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 59%;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row; /*fica um do lado do outro*/
+    justify-content: space-between;
+    padding: 0px 40px;
+  }
+
+  .content .menu {
+    display: none;
+    /*desaparece os links da tela (home, sobre nos etc)*/
+  }
+
+  .one,
+  .two,
+  .three {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin: 6px auto;
+    transition-duration: 0.5s;
+  }
+
+  .menu-toggle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .content.on {
+    position: fixed;
+    /*para fixar e nao rolar na pagina */
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(253, 255, 252, 0.7);
+    z-index: 10; /*certificando que esse elemento vai ficar na frente de qualquer outro elemento*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .content.on .logo {
+    display: none; /*remover a logo em cima do hamburguer*/
+  }
+
+  .content.on .menu-toggle {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+  }
+
+  .content.on .menu {
+    display: block;
+  }
+
+  .content.on .menu li {
+    display: flex;
+    justify-content: center;
+  }
+
+  .content.on .menu li a {
+    font-size: 2rem;
+    padding: 2rem;
+  }
+
+  .content.on .menu-toggle .two {
+    opacity: 0;
+
+    /*Remove a linha do meio do hamburguer*/
+  }
+
+  .content.on .menu-toggle .one {
+    transform: rotate(45deg) translate(5px, -8px);
+  }
+
+  .content.on .menu-toggle .three {
+    transform: rotate(-45deg) translate(20px, -6px);
+  }
+
+  .sobrenos .card {
+    width: 250px;
+    height: 300px;
+  }
+  .sobrenos .card:hover {
+    height: 260px;
+    width: 180px;
+  }
+
+  .sobrenos .card .caixaimg {
+    width: 150px;
+    height: 200px;
+  }
+
+  .sobrenos .card .conteudo {
+    top: 210px;
+  }
+  .sobrenos .card .conteudo h2 {
+    padding-bottom: 10px;
+    font-size: 2rem;
+  }
+
+  .sobrenos .card .conteudo p {
+    overflow: hidden;
+    font-size: 1.3rem;
+  }
+
+  .sobrenos .card:hover .conteudo {
+    top: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .conteudo-principal h1 {
+    width: 500px;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .conteudo-principal h2 {
+    font-size: 2rem;
+  }
+
+  .img_missao img {
     width: 200px;
     height: 250px;
     margin-left: 10px;
+  }
 }
 
+@media (max-width: 500px) {
+  .btn {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+  }
+
+  .btn button {
+    font-size: 1.5rem;
+    width: 100%;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+  }
+
+  .conteudo-principal h1 {
+    width: 350px;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .conteudo-principal h2 {
+    width: 200px;
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 
-@media(max-width: 500px){
-    .btn{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 150px;
-    }
+@media (max-width: 395px) {
+  .img_missao img {
+    width: 250px;
+    height: auto;
+    margin-left: 10px;
+  }
 
-    .btn button{
-        font-size: 1.5rem;
-        width: 100%;
-        font-size: 1.3rem;
-        margin-top: 2rem;
-    }
-
-    .conteudo-principal h1{
-        width: 350px;
-        font-size: 1rem;
-        text-align: center;
-
-    }
-
-    .conteudo-principal h2{
-        width: 200px;
-        font-size: 1rem;
-        text-align: center;
-    }
-}
-
-@media(max-width:395px){
-
-    .img_missao img {
-        width: 250px;
-        height: auto;
-        margin-left: 10px;
-    }
-
-    .conteudo_missao_principal p {
-        text-align: center;
-        width: 250px;
-    }
-
+  .conteudo_missao_principal p {
+    text-align: center;
+    width: 250px;
+  }
 }
