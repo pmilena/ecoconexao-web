@@ -68,6 +68,7 @@
             <th>Nome</th>
             <th>Email</th>
             <th>Tipo de Conteúdo</th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody>
@@ -91,17 +92,43 @@
             users.forEach((user) => {
               const row = document.createElement("tr");
               row.innerHTML = `
-            <td>${user.id}</td>
-            <td>${user.name}</td>
-            <td>${user.email}</td>
-            <td>${user.tipoConteudo}</td>
-          `;
+    <td>${user.id}</td>
+    <td>${user.name}</td>
+    <td>${user.email}</td>
+    <td>${user.tipoConteudo}</td>
+    <td>
+      <button class="delete-btn" onclick="deleteUser(${user.id})">Excluir</button>
+    </td>
+  `;
               tbody.appendChild(row);
             });
           })
           .catch((error) => {
             console.error("Erro ao carregar usuários:", error);
           });
+      }
+
+      function deleteUser(userId) {
+        // Confirmar antes de deletar
+        if (confirm("Tem certeza de que deseja excluir este usuário?")) {
+          fetch(`http://localhost:3000/api/users/delete/${userId}`, {
+            method: "DELETE",
+          })
+            .then((response) => {
+              if (response.ok) {
+                alert("Usuário excluído com sucesso!");
+                loadUsers(); // Atualiza a lista de usuários
+              } else {
+                return response.text().then((message) => {
+                  throw new Error(message);
+                });
+              }
+            })
+            .catch((error) => {
+              console.error("Erro ao excluir usuário:", error);
+              alert("Erro ao excluir usuário: " + error.message);
+            });
+        }
       }
     </script>
   </body>
