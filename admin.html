@@ -1,208 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Área Administrativa</title>
+    <title>Página de Administração</title>
     <style>
-      /* Estilos básicos */
       body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
         background-color: #f4f4f9;
       }
-      header {
-        background-color: #2a2a2a;
-        color: #fff;
-        padding: 15px 20px;
-        text-align: center;
-      }
-      .container {
-        max-width: 800px;
+      .admin-container {
+        width: 80%;
         margin: 20px auto;
-        background: #fff;
         padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
       table {
         width: 100%;
         border-collapse: collapse;
-        margin-bottom: 20px;
+        margin-top: 20px;
       }
-      table,
       th,
       td {
+        padding: 10px;
         border: 1px solid #ddd;
-      }
-      th,
-      td {
         text-align: left;
-        padding: 8px;
       }
       th {
         background-color: #f2f2f2;
       }
-      button {
-        padding: 8px 12px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
+      h2 {
+        color: #333;
       }
-      .btn-edit {
-        background-color: #4caf50;
-        color: white;
-      }
-      .btn-delete {
-        background-color: #f44336;
-        color: white;
-      }
-      .btn-add {
-        display: block;
-        width: 100%;
+      .button {
+        padding: 10px 15px;
         background-color: #007bff;
         color: white;
+        border: none;
+        cursor: pointer;
         text-align: center;
-        margin-bottom: 20px;
-        text-decoration: none;
-        padding: 10px;
-        border-radius: 4px;
-      }
-      .form-section {
-        display: none;
+        display: inline-block;
         margin-top: 20px;
       }
-      .form-section input {
-        display: block;
-        width: calc(100% - 20px);
-        margin: 10px 0;
-        padding: 8px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-      }
-      .form-section button {
-        background-color: #4caf50;
-        color: white;
+      .button:hover {
+        background-color: #0056b3;
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>Área Administrativa</h1>
-    </header>
+    <div class="admin-container">
+      <h2>Painel de Administração</h2>
+      <p>
+        Bem-vindo ao painel de administração. Aqui você pode gerenciar os
+        usuários cadastrados.
+      </p>
 
-    <div class="container">
-      <a href="#" class="btn-add" id="btn-add-user">Adicionar Novo Usuário</a>
+      <button class="button" onclick="loadUsers()">Carregar Usuários</button>
 
-      <table>
+      <h3>Lista de Usuários</h3>
+      <table id="usersTable">
         <thead>
           <tr>
             <th>ID</th>
             <th>Nome</th>
-            <th>E-mail</th>
-            <th>Ações</th>
+            <th>Email</th>
+            <th>Tipo de Conteúdo</th>
           </tr>
         </thead>
-        <tbody id="user-list">
-          <!-- Os dados dos usuários serão carregados aqui dinamicamente -->
+        <tbody>
+          <!-- Usuários serão carregados aqui -->
         </tbody>
       </table>
-
-      <div class="form-section" id="form-section">
-        <h2 id="form-title">Adicionar Usuário</h2>
-        <input type="hidden" id="user-id" />
-        <input type="text" id="user-name" placeholder="Nome" required />
-        <input type="email" id="user-email" placeholder="E-mail" required />
-        <button id="form-submit">Salvar</button>
-      </div>
     </div>
-
     <script>
-      // URL base do backend
-      const BASE_URL = "http://localhost:8080/api/users";
+      function loadUsers() {
+        console.log("Carregando usuários...");
+        fetch("http://localhost:3000/api/users/list")
+          .then((response) => {
+            console.log("Resposta recebida:", response);
+            return response.json();
+          })
+          .then((users) => {
+            console.log("Usuários carregados:", users);
+            const tbody = document.querySelector("#usersTable tbody");
+            tbody.innerHTML = ""; // Limpa a tabela antes de adicionar novos dados
 
-      const userList = document.getElementById("user-list");
-      const formSection = document.getElementById("form-section");
-      const formTitle = document.getElementById("form-title");
-      const btnAddUser = document.getElementById("btn-add-user");
-
-      const userIdField = document.getElementById("user-id");
-      const userNameField = document.getElementById("user-name");
-      const userEmailField = document.getElementById("user-email");
-      const formSubmitButton = document.getElementById("form-submit");
-
-      // Carregar lista de usuários
-      const loadUsers = async () => {
-        const response = await fetch(`${BASE_URL}/list`);
-        const users = await response.json();
-        userList.innerHTML = users
-          .map(
-            (user) => `
-            <tr>
-                <td>${user.id}</td>
-                <td>${user.name}</td>
-                <td>${user.email}</td>
-                <td>
-                    <button class="btn-edit" onclick="editUser(${user.id}, '${user.name}', '${user.email}')">Editar</button>
-                    <button class="btn-delete" onclick="deleteUser(${user.id})">Excluir</button>
-                </td>
-            </tr>
-        `
-          )
-          .join("");
-      };
-
-      // Excluir usuário
-      const deleteUser = async (id) => {
-        if (confirm("Tem certeza que deseja excluir este usuário?")) {
-          await fetch(`${BASE_URL}/${id}`, { method: "DELETE" });
-          alert("Usuário excluído com sucesso!");
-          loadUsers();
-        }
-      };
-
-      // Mostrar formulário para editar usuário
-      const editUser = (id, name, email) => {
-        formSection.style.display = "block";
-        formTitle.innerText = "Editar Usuário";
-        userIdField.value = id;
-        userNameField.value = name;
-        userEmailField.value = email;
-      };
-
-      // Mostrar formulário para adicionar usuário
-      btnAddUser.addEventListener("click", () => {
-        formSection.style.display = "block";
-        formTitle.innerText = "Adicionar Usuário";
-        userIdField.value = "";
-        userNameField.value = "";
-        userEmailField.value = "";
-      });
-
-      // Salvar usuário (adicionar ou editar)
-      formSubmitButton.addEventListener("click", async () => {
-        const id = userIdField.value;
-        const name = userNameField.value;
-        const email = userEmailField.value;
-
-        const user = { name, email };
-        const method = id ? "PUT" : "POST";
-        const url = id ? `${BASE_URL}/${id}` : `${BASE_URL}/register`;
-
-        await fetch(url, {
-          method,
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(user),
-        });
-
-        alert(`Usuário ${id ? "atualizado" : "adicionado"} com sucesso!`);
-        formSection.style.display = "none";
-        loadUsers();
-      });
-
-      // Inicializar
-      loadUsers();
+            users.forEach((user) => {
+              const row = document.createElement("tr");
+              row.innerHTML = `
+            <td>${user.id}</td>
+            <td>${user.name}</td>
+            <td>${user.email}</td>
+            <td>${user.tipoConteudo}</td>
+          `;
+              tbody.appendChild(row);
+            });
+          })
+          .catch((error) => {
+            console.error("Erro ao carregar usuários:", error);
+          });
+      }
     </script>
   </body>
 </html>
