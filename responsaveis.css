@@ -138,12 +138,78 @@ footer h4 {
 }
 
 
-@media (max-width: 768px) {
-    .navbar-nav a {
-        margin-left: 10px;
-        font-size: 0.9rem;
+@media (max-width: 992px) {
+    .container {
+        padding: 0 10px;
     }
+    #nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-nav {
+        gap: 15px;
+    }
+    .navbar-collapse {
+        display: block !important;
+    }
+}
 
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 8px;
+    }
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    .navbar-brand img {
+        width: 80%;
+    }
+    .navbar-nav {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 5px;
+    }
+    .navbar-brand img {
+        width: 70%;
+    }
+    .navbar-nav a {
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .container {
+        padding: 0 5px;
+    }
+    .navbar-brand img {
+        width: 60%;
+    }
+    .navbar-nav a {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 395px) {
+    .container {
+        padding: 0 2px;
+    }
+    .navbar-brand img {
+        width: 50%;
+    }
+    .navbar-nav a {
+        font-size: 12px;
+    }
+}
+
+/*
     section {
         padding: 15px;
     }

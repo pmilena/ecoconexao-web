@@ -155,3 +155,86 @@ h3,
 .conteudo_pedagogico ul {
   animation: fadeIn 1.5s ease-in-out;
 }
+
+@media (max-width: 992px) {
+  .content {
+    flex-direction: row;
+    padding: 15px;
+  }
+
+  .logo h3 {
+    font-size: 1.2rem;
+  }
+
+  .cabecalho_menu a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .cabecalho_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cabecalho_menu a {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    padding: 10px;
+  }
+
+  .logo img {
+    width: 60px;
+  }
+
+  .cabecalho_menu {
+    gap: 8px;
+  }
+
+  .cabecalho_menu a {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .content {
+    padding: 8px;
+  }
+
+  .logo img {
+    width: 50px;
+  }
+
+  .cabecalho_menu a {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 395px) {
+  .content {
+    padding: 5px;
+  }
+
+  .logo img {
+    width: 40px;
+  }
+
+  .cabecalho_menu a {
+    font-size: 0.65rem;
+  }
+}
