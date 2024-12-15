@@ -49,6 +49,7 @@ header {
   width: 100%;
   height: 100%;
   border-radius: 50px;
+  margin-right: 10px;
 }
 
 .content .menu {
@@ -296,7 +297,7 @@ header {
 .news {
   background-color: #a2ca71;
   width: 100%;
-  padding: 50px;
+  padding: 20px 50px;
   /* height: 50vh; */
 }
 .news h2 {
@@ -310,8 +311,9 @@ header {
 .news-container {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  margin: 40px auto;
+  margin: 30px auto;
   gap: 100px;
 }
 
@@ -412,6 +414,23 @@ footer h4 {
   .conteudo_missao_principal p {
     margin-bottom: 10px;
     margin-top: 10px;
+  }
+
+  .news-container {
+    gap: 10px;
+  }
+
+  .news-container-text {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .assine-newsletter-container {
+    width: 100%;
+  }
+
+  .assine-newsletter-container input {
+    width: 60vw;
   }
 
   html {
