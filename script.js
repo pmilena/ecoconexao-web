@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const formData = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
-        tipoConteudo: document.getElementById("tipoConteudo").value, // Novo campo adicionado
+        tipoConteudo: document.getElementById("tipoConteudo").value,
       };
 
       // Envia os dados para a API do backend usando fetch
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
         body: JSON.stringify(formData),
       })
-        .then((response) => response.text()) // vou obter resposta como texto
+        .then((response) => response.text()) // Recebe resposta como texto
         .then((text) => {
           try {
             const data = JSON.parse(text);
@@ -85,10 +85,22 @@ document.addEventListener("DOMContentLoaded", function () {
           } catch (e) {
             document.getElementById("responseMessage").innerText = text;
           }
+
+          // Limpa os campos do formulário
+          document.getElementById("registrationForm").reset();
         })
         .catch((error) => {
           document.getElementById("responseMessage").innerText =
             "Erro ao registrar usuário: " + error.message;
         });
     });
+
+  const inputs = document.querySelectorAll(
+    "#registrationForm input, #registrationForm select"
+  );
+  inputs.forEach((input) => {
+    input.addEventListener("focus", function () {
+      document.getElementById("responseMessage").innerText = "";
+    });
+  });
 });
