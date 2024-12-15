@@ -81,6 +81,7 @@ a {
 /*first-section*/
 
 .first-section {
+  position: relative;
   background-image: url(./img/banner_kids.png);
   background-position: center center;
   background-size: cover;
@@ -535,15 +536,31 @@ footer {
   }
 
   .first-section::before {
-    content: "";
+    content: ""; /* Necessário para o pseudo-elemento funcionar */
     position: absolute;
-    /* top: 0;
+    top: 0;
     left: 0;
     right: 0;
-    bottom: 0; */
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com opacidade */
+    z-index: 1; /* Coloca o overlay acima da imagem */
+  }
+
+  .first-section > * {
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo (como texto) fique acima do overlay */
+  }
+
+  /* .first-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
-  }
+  } */
 
   .first-section .conteudo-principal {
     margin-right: 0rem;
@@ -553,12 +570,16 @@ footer {
     z-index: 99;
   }
 
-  .first-section h1 {
-    color: white;
+  .first-section {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 8px;
   }
 
+  .first-section h1,
   .first-section h2 {
     color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   }
 
   iframe {
