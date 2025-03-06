@@ -6,6 +6,8 @@ O site EcoConexão foi desenvolvido por Vanessa Bispo (Dev Front-end), Ana Santa
 "Promover a conscientização ambiental e incentivar práticas sustentáveis por meio de conteúdos educativos conectando escolas, pais e crianças na construção de um futuro mais verde e responsável."
 O projeto é um site que oferece materiais educativos, ferramentas interativas e informações úteis para engajar diferentes públicos na causa ambiental.
 
+Este repositório contém o **frontend** do projeto, enquanto o **backend** está gerenciado em um repositório separado (ecoconexao-api). Ambos os repositórios se complementam, com o backend fornecendo serviços de API para o frontend.
+
 ## 🛠️ Tecnologias Utilizadas
 
 ## Linguagens
@@ -48,5 +50,62 @@ o	H2 configurado para testes, com opção de migração para bancos de dados rel
 
 Você pode visualizar a página acessando o link do GitHub https://github.com/pmilena/ecoconexao-web, conferir o projeto deployado/hospedado na Versel através do link https://ecoconexaoweb.vercel.app/index.html#home ou clonando o repositório e abrindo o arquivo index.html em seu navegador.
 
+*************************************************************************************************************************************************************************************************************************************************
+
+# EcoConexão - TCC Project
+
+## 📋 About the Project
+
+The **EcoConexão** website was developed by Vanessa Bispo (Front-end Developer), Ana Santana (Front-end Developer), and Milena Pereira (Full Stack Developer). It is the product built as part of the final year project (TCC), with the goal of materializing the mission of the EcoConexão company:  
+*"Promote environmental awareness and encourage sustainable practices through educational content, connecting schools, parents, and children in building a greener and more responsible future."*  
+
+The project is a website that offers educational materials, interactive tools, and useful information to engage various audiences in the environmental cause.
+
+This repository contains the **frontend** of the project, while the **backend** is managed in a separate repository (ecoconexao-api). Both repositories complement each other, with the backend providing API services for the frontend.
+
+## 🛠️ Technologies Used
+
+### Languages
+• JavaScript (JS)  
+• CSS  
+• HTML  
+• Java (version 17+)  
+
+### Frameworks and Libraries
+• Spring Boot  
+• Spring Data JPA  
+• Jakarta Validation  
+• Lombok  
+• Bootstrap  
+
+### Database
+• H2 Database  
+
+### Build Tools
+• Maven  
+
+## 🚀 Features
+• Educational content on sustainability.  
+• Interactive tools (games).  
+• User management with registration and tracking.  
+
+## 🗂️ Project Structure
+
+The project was structured following best development practices:
+
+1. **Front-end**:  
+   Developed with HTML, CSS, and JavaScript, focusing on responsiveness and user experience.
+
+2. **Back-end**:  
+   Built with Java and Spring Boot, using a REST architecture to ensure system scalability and maintainability.
+
+3. **Database**:  
+   H2 configured for testing, with the option to migrate to relational databases in production environments.
+
+---
+
+## 🚀 How to View
+
+You can view the page by accessing the GitHub link [https://github.com/pmilena/ecoconexao-web](https://github.com/pmilena/ecoconexao-web), check the deployed project hosted on Vercel through the link [https://ecoconexaoweb.vercel.app/index.html#home](https://ecoconexaoweb.vercel.app/index.html#home), or clone the repository and open the `index.html` file in your browser.
 
 
